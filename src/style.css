@@ -1,0 +1,94 @@
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+     background-color: #8BC1CF;
+   
+}
+
+.container {
+    width: 600px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    content: " ";
+    display: table;
+    box-sizing: border-box;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-image: url(img01.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+    background-size: contain;
+}
+
+.box {
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+
+.row {
+    margin-left: -15px;
+    margin-right: -15px;
+    box-sizing: border-box;
+    clear: both;
+    display: table;
+    content: " ";
+   
+}
+.box textarea.textAreas{
+    width:100%;
+    height:100px;
+    font-size:16px;
+    padding:8px 9px;
+    resize: vertical;
+    border: 1px solid rgb(83, 146, 133);
+   
+}
+
+.box .apply-margin{
+    margin-top:20px;
+}
+
+button{
+    display:block;
+    margin:20px auto 0;
+}
+
+.box .legenda{
+  font-size:16px;
+  margin-bottom: 3px;
+  display: block;
+}
+
+
+div {
+    display: block;
+}
+
+
+.colunas{
+    position: relative;
+    min-height: 1px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    float: left;
+}
+
+form {
+    display: block;
+    margin-top: 0em;
+    box-sizing: border-box;
+}
+
+.input-group {
+    position: relative;
+    display: table;
+    border-collapse: separate;
+}

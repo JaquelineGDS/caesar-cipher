@@ -1,13 +1,51 @@
 <!DOCTYPE html>
+
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Caesar Cipher</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="cipher.js"></script>
-    <script src="index.js"></script>
-  </body>
+  
+<head>
+    
+<meta charset="utf-8">
+    
+<title>Caesar Cipher</title>
+    
+<link rel="stylesheet" href="style.css" />
+  
+</head>
+  
+<body>
+    
+<div class="container"> 
+<div class="box">
+<div class="row">
+<div class="colunas">
+<form method="post" name="Mnormal">
+<div class="legenda">Mensagem para criptografar:</div>			
+<textarea id="Tareacodemessage" type="text" placeholder="Digite aqui sua mensagem" class="textAreas"></textarea>
+<div class="input-group">
+<input type="text" id="key1" placeholder="Chave" class="inputs" >				
+<button id="btcodificar" type="button" onclick="getencode();">Criptografar</button>
+</div>
+</form>
+</div>
+<div class="colunas">
+<form method="post" name="Forms">
+<div class="legenda">Mensagem para descriptografar:</div>
+<textarea id="Tareadecodemessage" type="text" placeholder="Digite aqui sua mensagem" class="textAreas"></textarea>
+
+<div class="input-group">
+<input type="text" id="key2" placeholder="Chave" class="inputs">
+<button id="btdescodificar" type="button" onclick="getdecode();">Descriptografar</button>
+						
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>    
+<script src="cipher.js"></script>
+    
+<script src="tests.js"></script>
+  
+</body>
+
 </html>
