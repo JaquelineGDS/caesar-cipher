@@ -1,83 +1,53 @@
-window.cipher = {
-  
-
 function mod(n, p){
-    if ( n < 0 )
+    if ( n < 0 ){
         n = p - Math.abs(n) % p;
-
-    return n % p;
+       return n % p;
+    }
 }
 
-function getencode(){
+function getData(message, key, functionExecute, areaResult,textAreaReset,keyReset){
   
-  let message = document.getElementById('Tareacodemessage').value;
-  let displacement = parseInt(document.getElementById('key1').value);
+  var string = document.getElementById(message).value;
+  var displacement = parseInt(document.getElementById(key).value);
+  var result = functionExecute(string, displacement);
   
-  var resultEncode = encode(message, displacement);
-
-  document.getElementById('Tareadecodemessage').value = resultEncode; 
-
+  document.getElementById(areaResult).value = result; 
+  document.getElementById(textAreaReset).value = ""; 
+  document.getElementById(keyReset).value = "";
 }
 
 function encode(string, offset){
+
     var result = "";
     let code = 0;
+    let number = 0;
 
     for(let i = 0; i < string.length; i++){
          code = string.charCodeAt(i);
-
-        if (code >= 65 && code <= 65 + 26){
-            code -= 65;
-            code = mod(code + offset, 26);
-            code += 65;
-        } else if (code >= 97 && code <= 97 + 26){
-            code -= 97;
-            code = mod(code + offset, 26);
-            code += 97;
+        if (code >= 65 && code <= 90){
+            number = mod((code - 65 + offset), 26) + 65;
+        } else if (code >= 97 && code <= 122){
+            number = mod((code - 97 + offset), 26) + 97;
         }
-
-        result += String.fromCharCode(code);
+        result += String.fromCharCode(number);
     }
-
     return result;
-}
-
-function getdecode(){
-  
-  let message = document.getElementById('Tareadecodemessage').value;
-  let displacement = parseInt(document.getElementById('key2').value);
- 
-  var resultDecode = decode(message, displacement);
-
-  document.getElementById('Tareacodemessage').value = resultDecode; 
-
 }
 
 function decode(string, offset){
+    
     var result = "";
     let code = 0;
+    let number = 0;
 
     for(let i = 0; i < string.length; i++){
          code = string.charCodeAt(i);
-
-        if (code >= 65 && code <= 65 + 26){
-            code -= 65;
-            code = mod(code - offset, 26);
-            code += 65;
-        } else if (code >= 97 && code <= 97 + 26){
-            code -= 97;
-            code = mod(code - offset, 26);
-            code += 97;
+        if (code >= 65 && code <= 90){
+            number = mod((code - 65 - offset), 26) + 65;
+        } else if (code >= 97 && code <= 122){
+            number = mod((code - 97 - offset), 26) + 97;
         }
-
-        result += String.fromCharCode(code);
+        result += String.fromCharCode(number);
     }
-
     return result;
 }
-
-
-
-
- 
-};

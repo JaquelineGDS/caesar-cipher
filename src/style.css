@@ -1,29 +1,64 @@
-body {
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 14px;
-    line-height: 1.42857143;
-    color: #333;
-     background-color: #8BC1CF;
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body{
+    font-size:12px;
+    width: 100%;
+    min-width: 1140px;
+    padding:0;
+    background: #FFF;
+    font-family: 'Montserrat', sans-serif;
+    color: #666;
+}
+ .cabecalho{
+     position: relative;
+     z-index: 2;
+     padding: 25px 2%;
+     width: 100%;
+     background: #02A789;
+     
+    }
+
+
+
+.logo img{
+    width: 170px;
+    height: 100px;
+    display: block;
+    margin: 0px auto;
+    padding: 0px
+}
+
+.rodape{
+    background: #02A789; 
+    width: 100%; 
+    position: relative;
+    z-index: 2;
+    padding: 20px 2%;
    
 }
 
+.rodape p{
+text-align: center;
+
+}
+
 .container {
-    width: 600px;
+    
+    width: 890px;
+    height: 350px;
     margin-right: auto;
     margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
     content: " ";
-    display: table;
+    display: block;
     box-sizing: border-box;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    background-image: url(img01.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    position: relative;
+    margin-top: 400px;
+    margin-bottom: 70px;
+    background-color: #FFD608;
+    position: center;
     background-size: contain;
+    
 }
 
 .box {
@@ -31,9 +66,34 @@ body {
     box-sizing: border-box;
 }
 
+.conteudo{
+    width: 85%;
+    display: flex;
+    position: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10px;
+    margin-bottom: 70px;
+}
 
-.row {
-    margin-left: -15px;
+.span1{
+    float: left;
+   
+}
+
+.spanimg img{
+    float: right;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+.spanimg img{
+    width: 300px;
+    height: 250px;
+}
+
+.row{
+   
     margin-right: -15px;
     box-sizing: border-box;
     clear: both;
@@ -42,28 +102,25 @@ body {
    
 }
 .box textarea.textAreas{
-    width:100%;
-    height:100px;
-    font-size:16px;
-    padding:8px 9px;
+    width: 300px;
+    height: 100px;
+    font-size: 16px;
+    padding: 8px 9px;
     resize: vertical;
-    border: 1px solid rgb(83, 146, 133);
-   
+    border:1px #FFF
 }
 
 .box .apply-margin{
     margin-top:20px;
 }
 
-button{
-    display:block;
-    margin:20px auto 0;
-}
 
 .box .legenda{
-  font-size:16px;
-  margin-bottom: 3px;
+  font-size:17px;
+  margin-bottom: 5px;
   display: block;
+  text-align: center;
+  font-weight: bold;
 }
 
 
@@ -75,20 +132,124 @@ div {
 .colunas{
     position: relative;
     min-height: 1px;
+    box-sizing: content-box;
+    
+}
+.colunas .coluna01{
+    float: left;
     padding-left: 20px;
     padding-right: 20px;
-    box-sizing: border-box;
-    float: left;
+}
+.colunas .coluna02{
+    float: right;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
-form {
-    display: block;
-    margin-top: 0em;
-    box-sizing: border-box;
-}
 
 .input-group {
     position: relative;
     display: table;
     border-collapse: separate;
+    height: 43px;
+}
+
+h1 {
+    font-family: montserrat;
+    display: block;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-size: 20px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    text-align: center; 
+    font-weight: bold;
+   
+}
+.span1 p{
+    text-align: center; 
+    /*display: block; */
+    font-size: 15px;
+    line-height: 34px;
+    
+}
+
+.span2 p{
+    width: 300px;
+    box-shadow: none;
+    border: none;
+    padding: 0px;
+    margin-top:18px;
+    font-weight: lighter;
+    display: inline-flex;
+    font-size: 15px;
+    text-align: center;
+    line-height: 25px;
+    margin: 0 0 10px;
+    float: left;
+    padding-bottom: 25px;
+}
+
+.span2{
+    
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    box-sizing: border-box;
+    width: 23%;
+    float: left;
+    margin-left: 0;
+    align-items:center;
+    margin: 0 auto 0 auto
+}
+
+
+.span2 img{
+    margin: 0 auto;
+    padding-bottom: 25px;
+    display: block;
+    width: 90px;
+    height: 90px;
+}
+
+
+.colunas button{
+    
+    height: 43px;
+    box-sizing: border-box;
+    background: #fb6066;
+    border-radius: 2px;
+    border: 0;
+    box-shadow: none;
+    text-shadow: none;
+    color: #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.inputs{
+    width: 100px;
+    height: 43px;
+    box-sizing: border-box;
+    border: 0;
+    font-size: 12px;
+    color: #4c4e52;
+    font-weight: 500;
+    margin: 0;
+    padding: 0 15px;
+    box-shadow: none;
+    border-radius: 2px;
+}
+
+#Tareacodemessage::placeholder{
+ color: #666;
+ font-size:15px;
+}
+#Tareadecodemessage::placeholder{
+ color: #666;
+ font-size:15px;
+  font-family: 'Montserrat', sans-serif;
 }
