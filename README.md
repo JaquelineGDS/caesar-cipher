@@ -42,14 +42,14 @@ ou descifrar a mensagem.
 
 Para a realização do projeto foi desenvolvido um planejamento de execução onde foram definidos 
 todas as funcionalidades do mesmo. A partir disso, como planejado, foi desenvolvido um Diagrama de blocos,
-onde foi possivel projetar e ter maior clareza da sequência lógica  do fluxo de dados. Com o fluxo definido,
-foi realizado toda a parte lógica do projeto. Após concluida a parte lógica,  foi desenvolvido o Layout do projeto
+onde foi possivel projetar e ter maior clareza da sequência lógica do fluxo de dados. Com o fluxo definido,
+foi realizado toda a parte lógica do projeto. Após concluida a parte lógica, foi desenvolvido o Layout do projeto
 de acordo como a necessidade do cliente, que precisa de uma aplicação que encriptografe e descriptografe mensagens. 
-Foi criado um arquivo de testes onde são checados se todas as funçóes do sistema estão funcionando.
+Foi criado um arquivo de testes onde são verificadas se todas as funçóes do sistema estão funcionando corretamente.
 
 
 ![diagrama](https://github.com/JaquelineGDS/caesar-cipher/blob/master/src/imagens/diagrama.png)
-https://github.com/JaquelineGDS/caesar-cipher/blob/master/src/imagens/diagrama.png
+
 
 ## Funcionalidades 
 
