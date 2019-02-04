@@ -3,86 +3,72 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>repl.it</title>
+    <title>Cifra de CÃ©sar</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
-   
   </head>
+
 <body>
 
-<div class= "cabecalho">
-    <header>
-        <div class="logo">
-            <img src="imagens/img04.png" alt= "Anos 90" title="Imagem anos 90"/>
-        </div>
-    </header>
-</div>
-
-<div class="conteudo">
-    <div class="span1">
-        <h1> Mensagem criptografada</h1>
-        
-        <p>Vai rolar festa para a minha mãe esse ano? <strong> Sim!!!</strong>
-        <br> 
-        O aniversário da minha mãe está chegando. E como todos sabem ela é super curiosa!
-        <br>
-        E devido a isso criei essa aplicação para criptografar e descriptografar mensagens.
-        <br>
-        Assim apenas as pessoas que saibam a chave irão conseguir entender a mensagem. 
-        </p>
-    </div>
-    <div class="spanimg"><img  src="imagens/pessoas.jpg"/></div>
-</div> 
-
-<div class="span2"><img src="imagens/number1.png" />
-    <p>Insira a mensagem na area de texto Criptografar.</p>
-    </div>
-    
-    <div class="span2"><img src="imagens/number2.png" />
-    <p>Insira a chave para deslocamento. Não se esqueça, é permitodo apenas numeros (positivos e negativos).</p>
-    </div>
-    
-    <div class="span2"><img src="imagens/number3.png" />
-    <p>A sua mensagem criptografada será exibida na area de texto Descriptografar.</p>
-    </div>
-    
-    <div class="span2"><img src="imagens/number4.png" />
-    <p>Agora é só compartilhar a mensagem criptografada com o destinatario. E não se esqueça de informar a mesma chave de deslocamento usada para criptografar a mensagem para que a pessoa possa descriptografa-la.</p>
-    </div>
-    </div>
-    
-
 <div class="container"> 
-        
-    <div class="colunas">
-        <div class="box">
-            <div class="row">  
-                <div class="coluna01">
-                      <div class="legenda">Mensagem para Criptografar:</div>
-                          <textarea id="Tareacodemessage" placeholder="Digite aqui sua mensagem" class="textAreas"></textarea>
-                        <div class="input-group">
-                             <input type="text" id="key1" placeholder="Chave" class="inputs" >				
-                             <button id="btcodificar" type="button" onclick="getData('Tareacodemessage', 'key1', encode, 'Tareadecodemessage', 'Tareacodemessage', 'key1')">Criptografar</button>
-                        </div>
-                </div>      
-                <div class="coluna02">
-                      <div class="legenda">Mensagem para Descriptografar:</div>
-                          <textarea id="Tareadecodemessage" placeholder="Digite aqui sua mensagem" class="textAreas"></textarea>
-                          <div class="input-group">
-                              <input type="text" id="key2" placeholder="Chave" class="inputs" >
-                              <button id="btdescodificar" type="button" onclick="getData('Tareadecodemessage', 'key2', decode, 'Tareacodemessage', 'Tareadecodemessage', 'key2')">Descriptografar</button>             
-                          </div>
+    <div class="conteudo">
+
+        <div class="span1">
+            <h1> CIPHER - Mensagem Criptografada</h1>
+        </div>
+
+        <div class="content-floating">
+            <div class="span2"><img src="imagens/number1.png" />
+                <p>Insira a mensagem na Ã¡rea de texto.</p>
+            </div>
+            <div class="span2"><img src="imagens/number2.png" />
+                <p>Insira a chave para deslocamento. NÃ£o se esqueÃ§a, Ã© permitodo apenas numeros (positivos e negativos).</p>
+            </div>
+            <div class="span2"><img src="imagens/number3.png" />
+                <p>VocÃª deseja  Criptografar ou Descriptografar uma mensagem?</p>
+            </div>
+            <div class="span2"><img src="imagens/number4.png" />
+                <p>Agora Ã© sÃ³ copiar e enviar a mensagem para o destinatario. E nÃ£o se esqueÃ§a de informar a chave usada para Criptografar a mensagem.</p>
+            </div>
+        </div> 
+       
+        <div class="box-one">
+            <div class="balao1">
+                <div class="tarea1ballon">
+                    <textarea id="Tareacodemessage" placeholder="Digite aqui a mensagem" cols="64" rows="5"></textarea>
                 </div>
             </div>
-        </div>
-    </div>
-</div>	
+            
+            <div class="Inputoffset">
+                <label for="">Numero da chave:</label>
+                <input id="key1" placeholder="Digite aqui o numero da chave ">
+            </div>
+        
+            <div class="buttons">	
+                <button id="btcodificar" type="button" onclick="getData('Tareacodemessage', 'key1', encode, 'tarearesult', 'Tareacodemessage', 'key1')">Criptografar</button>
+                <button id="btdescodificar" type="button" onclick="getData('Tareacodemessage', 'key1', decode, 'tarearesult', 'Tareacodemessage', 'key1')">Descriptografar</button>
+                
+            </div>
+         </div>
+
+         <div class="box-two">
+             <div class="result">
+                <div class="balao2">
+                <div class="tarea2ballon">
+                    <textarea id="tarearesult" cols="64" rows="5" readonly="true"></textarea>
+                </div>
+            </div>
+            </div>
+         </div>
+
+</div>
+
 <footer>
     <div class="rodape">
-        <p>Jaqueline Guuimarães</p>
+        <p>Jaqueline GuimarÃ£es</p>
     </div>
 </footer>
     
-    <script src="script.js"></script>
+    <script src="cipher.js"></script>
     <script src="tests.js"></script>
-  </body>
-</html>	
+
+</body>

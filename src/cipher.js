@@ -1,8 +1,5 @@
-function mod(n, p){
-    if ( n < 0 ){
-        n = p - Math.abs(n) % p;
-       return n % p;
-    }
+function mod(n, m) {
+    return ((n % m) + m) % m;
 }
 
 function getData(message, key, functionExecute, areaResult,textAreaReset,keyReset){
@@ -17,7 +14,6 @@ function getData(message, key, functionExecute, areaResult,textAreaReset,keyRese
 }
 
 function encode(string, offset){
-
     var result = "";
     let code = 0;
     let number = 0;
