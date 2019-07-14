@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Cifra de César</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <header class="img-header">
+        <img src="./imagens/logo.png">
+    </header>
+    <main class="container directionColumn">
+        <textarea class='textArea text' placeholder="Digite aqui a mensagem"></textarea>
+        <section class="item-dFlex">
+            <label>Numero da chave de deslocamento:</label>
+            <input class="offset inputKey" type="number">
+        </section>
+        <section class="item-dFlex">
+            <button class="btn-encode buttons" type="button">Criptografar</button>
+            <button class="btn-decode buttons" type="button">Descriptografar</button>
+        </section>
+    </main>
+    <script src="cipher.js"></script>
+    <script src="tests.js"></script>
+</body>

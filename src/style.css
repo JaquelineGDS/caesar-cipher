@@ -1,246 +1,79 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap');
 
  body{
-        font-size:14px;
-        width: 100%;
-        min-width: 1140px;
-        padding:0;
-        background: rgb(215, 235, 231);
-        font-family: 'Montserrat', sans-serif;
-        color: #666;
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+  background-image: url('./imagens/background.jpg');
+  background-attachment: fixed;
+  background-size: contain;
+  font-family: 'Roboto', sans-serif;
+  color: #5E4D3A;
+  text-align: center;
 }
 
-
-.content-floating{
-   
-    background: rgb(152, 206, 196);
-    /*rgb(148, 33, 33)*/
-    width: 800px;
-    height: 200px;
-    margin: 0 auto;
-    padding: 20px;
-    display: flex;
-    resize: both;
-    overflow: auto;
-
+.container{
+  display: flex;
+  align-items: center;
+  margin: 30px
 }
 
-h1 {
-    font-family: 'Montserrat', sans-serif;;
-    display: block;
-    font-size: 25px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    text-align: center; 
-    font-weight: bold;
-    color: rgb(148, 33, 33)
-   
+.img-header{
+  margin-top: 30px;
 }
 
-.span2 p{
-    
-    box-shadow: none;
-    border: none;
-    padding: 0px;
-    font-weight: lighter;
-    font-size: 14px;
-    text-align: center;
-    line-height: 20px;
-    float: left;
-    padding-bottom: 5px;
-    font-family: 'Montserrat', sans-serif;
+.item-dFlex{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 400px;
+  margin-top: 20px;
+  flex-direction: row;
 }
 
-.span2{
-    
-    display: flex;
-    flex-direction: column;
-    margin-right: auto;
-    box-sizing: border-box;
-    width: 25%;
-    float: left;
-    margin-left: 0;
-    align-items:center;
-    
+.directionColumn{
+  flex-direction: column;
 }
 
-
-.span2 img{
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin: 0 auto;
-    display: block;
-    width: 50px;
-    height: 50px;
+.textArea{
+  background-color: #1E1915;
+  text-decoration: none;
+  outline: none; 
+  height: 300px;
+  width: 400px;
+  border: solid 2px #5E4D3A;
+  border-radius: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px
 }
 
-
-.box-one{
-    background:  transparent;
-    height: 200px;
-    width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    display: block;
-   /* justify-content: center;
-    align-items: center;
-    resize: both;
-    overflow: auto;
-    align-items: center*/
+.inputKey{
+  text-decoration: none;
+  outline: none; 
+  padding: 15px;
+  background-color: #1E1915;
+  border: solid 2px #5E4D3A;
+  border-radius: 10px;
+  color: #5E4D3A
 }
 
-.tarea1ballon textarea{
-    align-items: center;
-    width: 510px;
-    height: 80px;
-    background: transparent;
-    border: none;
-    text-decoration: none;
-    margin-left: 10px;
-    margin-top: 9px;
-    margin-right: 10px;
-    font-family: 'Montserrat', sans-serif; 
-    font-size: 14px;
-    overflow-y: hidden;
-    outline: none;
-    
-  }
-
-  .balao1 {
-    background:  rgb(245, 243, 243);
-    border-radius: 15px;
-    width: 550px;
-    height: 100px;
-    position: relative;
-  }
-  
-  .balao1:after {
-    content: "";
-    width: 0;
-    height: 0;
-    position: absolute;
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
-    border-top: 20px solid rgb(245, 243, 243);
-    bottom: -20px;
-    left: 20%;
-  }
-
-  .box-two{
-    background:  transparent;
-    height: 120px;
-    width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    display: block;
-    resize: both;
-    overflow: auto;
-    align-items: center;
-    justify-content: center;
-    align-items: center;
+.button{
+  background-color: #5E4D3A;
+  border: 0;
+  font-size: 12px;
+  color: #1E1915;
+  padding: 15px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+  outline: none;
 }
 
-  .tarea2ballon textarea{
-    align-items: center;
-    width: 510px;
-    height: 80px;
-    background: transparent;
-    border: none;
-    text-decoration: none;
-    margin-left: 10px;
-    margin-top: 9px;
-    margin-right: 10px; 
-    font-family: 'Montserrat', sans-serif; 
-    font-size: 14px;
-    overflow-y: hidden;
-    outline: none;
-  }
+.buttons:hover{
+  background-color:#1E1915;
+  color: #5E4D3A
+}
 
-
-  .balao2 {
-
-    background:  rgb(245, 243, 243);
-    border-radius: 15px;
-    width: 550px;
-    height: 100px;
-    position: relative;
-    
-  }
-  
-  .balao2:after {
-    content: "";
-    width: 0;
-    height: 0;
-    position: absolute;
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
-    border-top: 20px solid rgb(245, 243, 243);
-    bottom: -20px;
-    left: 20%;
-  }
-
-
-
-
-  .Inputoffset input{
-    align-items: center;
-    width: 250px;
-    height: 20px;
-    background: rgb(245, 243, 243);
-    border: none;
-    text-decoration: none;
-    margin-left: 10px;
-    margin-top: 30px;
-    margin-right: 10px; 
-    font-family: 'Montserrat', sans-serif;
-    font-size: 14px; 
-    
-  }
-
-  .buttons button{
-   
-    border: 0;
-    font-size: 12px;
-    color: #4c4e52;
-    padding: 15px;
-    border-radius: 3px;
-    margin-left: 100px;
-    margin-top: 20px;
-    margin-right: 10px;
-   display: inline;
-    cursor: pointer;
-    font-size: 14px;
-    font-family: 'Montserrat', sans-serif;
-    outline: none;
-  }
-
-  .buttons button:hover{
-      background:rgb(148, 33, 33);
-      color: rgb(245, 243, 243);
-
-  }
 ::placeholder{
-    color: #666;
-    font-size: 12px;
-     font-family: 'Montserrat', sans-serif;
-   }
-
-   .legenda{
-    font-size:17px;
-    margin-bottom: 5px;
-    display: block;
-    text-align: center;
-    font-weight: bold;
-    font-family: 'Montserrat', sans-serif;
-  }
-  .rodape{
-    background: rgb(148, 33, 33); 
-    width: 100%; 
-    height: 50px;
-    padding: 5px 2%; 
-    text-align: center
-}
-
-.result {
-    margin-left: 250px;
+  color: #5E4D3A;
 }

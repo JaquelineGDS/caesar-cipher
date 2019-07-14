@@ -1,49 +1,53 @@
-function mod(n, m) {
+document.querySelector('.btn-encode').addEventListener('click', () => controllerFunctions(encode));
+document.querySelector('.btn-decode').addEventListener('click', () => controllerFunctions(decode));
+
+const controllerFunctions = (functionExecute) => {
+    const text = document.querySelector('.text').value;
+    const offset = parseInt(document.querySelector('.offset').value);
+    clear();
+    const result = functionExecute(text, offset);
+    document.querySelector('.text').value = result;
+}
+
+const mod = (n, m) => {
     return ((n % m) + m) % m;
 }
 
-function getData(message, key, functionExecute, areaResult,textAreaReset,keyReset){
-  
-  var string = document.getElementById(message).value;
-  var displacement = parseInt(document.getElementById(key).value);
-  var result = functionExecute(string, displacement);
-  
-  document.getElementById(areaResult).value = result; 
-  document.getElementById(textAreaReset).value = ""; 
-  document.getElementById(keyReset).value = "";
+const encode = (string, offset) => {
+    let result = [];
+    let number = 0;
+    for (let i in string) {
+       let ascCode = string.charCodeAt(i);
+        if (ascCode >= 65 && ascCode <= 90) {
+            number = mod((ascCode - 65 + offset), 26) + 65;
+        } else if (ascCode >= 97 && ascCode <= 122) {
+            number = mod((ascCode - 97 + offset), 26) + 97;
+        } else{
+            number = ascCode;
+        }
+        result.push(String.fromCharCode(number));
+    }
+    return result.join("");
 }
 
-function encode(string, offset){
-    var result = "";
-    let code = 0;
+const decode = (string, offset) => {
+    let result = [];
     let number = 0;
-
-    for(let i = 0; i < string.length; i++){
-         code = string.charCodeAt(i);
-        if (code >= 65 && code <= 90){
-            number = mod((code - 65 + offset), 26) + 65;
-        } else if (code >= 97 && code <= 122){
-            number = mod((code - 97 + offset), 26) + 97;
+    for (let i in string) {
+       let ascCode = string.charCodeAt(i);
+        if (ascCode >= 65 && ascCode <= 90) {
+            number = mod((ascCode - 65 - offset), 26) + 65;
+        } else if (ascCode >= 97 && ascCode <= 122) {
+            number = mod((ascCode - 97 - offset), 26) + 97;
+        } else{
+            number = ascCode;
         }
-        result += String.fromCharCode(number);
+        result.push(String.fromCharCode(number));
     }
-    return result;
+    return result.join("");
 }
 
-function decode(string, offset){
-    
-    var result = "";
-    let code = 0;
-    let number = 0;
-
-    for(let i = 0; i < string.length; i++){
-         code = string.charCodeAt(i);
-        if (code >= 65 && code <= 90){
-            number = mod((code - 65 - offset), 26) + 65;
-        } else if (code >= 97 && code <= 122){
-            number = mod((code - 97 - offset), 26) + 97;
-        }
-        result += String.fromCharCode(number);
-    }
-    return result;
+const clear = () => {
+    document.querySelector('.text').value = "";
+    document.querySelector('.offset').value = "";
 }
