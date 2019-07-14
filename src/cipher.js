@@ -11,8 +11,8 @@ const mod = (number, alphabetSize) => ((number % alphabetSize) + alphabetSize) %
 const encode = (text, offset) => {
   let result = [];
   let number = 0;
-  for (let i in text) {
-    let ascCode = text.charCodeAt(i);
+  for (let index in text) {
+    let ascCode = text.charCodeAt(index);
     if (ascCode >= 65 && ascCode <= 90) {
       number = mod((ascCode - 65 + offset), 26) + 65;
     } else if (ascCode >= 97 && ascCode <= 122) {
@@ -28,8 +28,8 @@ const encode = (text, offset) => {
 const decode = (text, offset) => {
   let result = [];
   let number = 0;
-  for (let i in text) {
-    let ascCode = text.charCodeAt(i);
+  for (let index in text) {
+    let ascCode = text.charCodeAt(index);
     if (ascCode >= 65 && ascCode <= 90) {
       number = mod((ascCode - 65 - offset), 26) + 65;
     } else if (ascCode >= 97 && ascCode <= 122) {
