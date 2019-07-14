@@ -1,0 +1,22 @@
+{
+  "name": "caesar-cipher",
+  "version": "1.0.0",
+  "description": "## Cliente",
+  "main": "cipher.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JaquelineGDS/caesar-cipher.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JaquelineGDS/caesar-cipher/issues"
+  },
+  "homepage": "https://github.com/JaquelineGDS/caesar-cipher#readme",
+  "dependencies": {
+    "eslint": "^6.0.1"
+  }
+}
