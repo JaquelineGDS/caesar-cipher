@@ -16,7 +16,8 @@
     "url": "https://github.com/JaquelineGDS/caesar-cipher/issues"
   },
   "homepage": "https://github.com/JaquelineGDS/caesar-cipher#readme",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "eslint": "^6.0.1"
   }
 }
